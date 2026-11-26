@@ -7,14 +7,12 @@
 </p>
 
 <p align="center">
-  <a href="https://pradeepmathias.vercel.app/"><strong>Portfolio ↗</strong></a>
+  <a href="https://pradeepmathias.vercel.app/"><strong>Portfolio</strong> &#x2197;&#xFE0E;</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/pradeep-mathias-98a938221"><strong>LinkedIn ↗</strong></a>
+  <a href="https://www.linkedin.com/in/pradeep-mathias-98a938221"><strong>LinkedIn</strong> &#x2197;&#xFE0E;</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="mailto:pradeepmathias2003@gmail.com"><strong>Email ↗</strong></a>
+  <a href="mailto:pradeepmathias2003@gmail.com"><strong>Email</strong> &#x2197;&#xFE0E;</a>
 </p>
-
-<br />
 
 I’m **Pradeep Mathias**, an M.Sc. Data Science and B.Sc. Mathematics graduate from Mangaluru focused on turning operational data into econometric forecasts, executive BI dashboards, and grounded AI systems. Previously worked as a Data Analyst Intern at **New Mangalore Port Authority (NMPA)** and AI Developer Intern at **Euron**.
 
@@ -29,7 +27,7 @@ I’m **Pradeep Mathias**, an M.Sc. Data Science and B.Sc. Mathematics graduate 
 </p>
 
 <p align="center">
-  <a href="https://pradeepmathias.vercel.app/#work">Interactive Case Studies ↗</a>
+  <a href="https://pradeepmathias.vercel.app/#work">Interactive Case Studies &#x2197;&#xFE0E;</a>
   &nbsp;·&nbsp;
   <a href="https://github.com/pradeepmathias02/nutrigpt">NutriGPT</a>
   &nbsp;·&nbsp;
@@ -40,7 +38,7 @@ I’m **Pradeep Mathias**, an M.Sc. Data Science and B.Sc. Mathematics graduate 
 
 ### Experience & metrics
 
-- **Port Operations Forecasting (NMPA)** — Modeled 58 months of vessel & cargo telemetry with SARIMA (`96.4%` historical fit) to project `6.22M MT` for 2026 berth planning.
+- **Port Operations Forecasting (NMPA)** — Modeled 58 months of vessel & cargo telemetry with SARIMA (`96.4%` historical fit) to project `6.22M MT` for 2026 berth planning.
 - **Retail Revenue Intelligence** — Engineered Python + SQL + Power BI cohorts over `10,000+` transactions (`+24.8%` RFM retention, `$1.4M` projected CLV).
 - **WellNest AI (Euron)** — Built FastAPI & MongoDB behavioral sentiment pipelines (`94.2%` accuracy) with automated PDF/CSV reporting.
 - **NutriGPT** — Grounded Llama 3 retrieval over `8,000+` verified food records in ChromaDB (`0.14s` query time, zero hallucination).
