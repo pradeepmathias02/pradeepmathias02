@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="836" height="260" viewBox="0 0 836 260"
+     role="img" aria-label="Selected projects">
+
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Noto Sans, Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+    .fadeUp { opacity: 0; animation: fadeUp .6s ease forwards; }
+    .d1 { animation-delay: .15s } .d2 { animation-delay: .3s }
+    .d3 { animation-delay: .45s } .d4 { animation-delay: .6s }
+    .barGrow { transform-origin: bottom; animation: grow .8s cubic-bezier(.4,0,.2,1) forwards; }
+    .b1 { animation-delay: .3s } .b2 { animation-delay: .45s }
+    .b3 { animation-delay: .55s } .b4 { animation-delay: .65s }
+    .typeLine { stroke-dasharray: 100; stroke-dashoffset: 100; animation: draw 1.2s ease forwards; }
+    .tl1 { animation-delay: .5s } .tl2 { animation-delay: .7s } .tl3 { animation-delay: .9s }
+    @keyframes fadeUp { to { opacity: 1 } }
+    @keyframes grow { from { transform: scaleY(0) } to { transform: scaleY(1) } }
+    @keyframes draw { to { stroke-dashoffset: 0 } }
+    @media (prefers-reduced-motion: reduce) {
+      .fadeUp { animation: none; opacity: 1 }
+      .barGrow { animation: none; transform: scaleY(1) }
+      .typeLine { animation: none; stroke-dashoffset: 0 }
+    }
+  </style>
+
+  <!-- CARD 1: Retail Customer BI -->
+  <g class="fadeUp d1">
+    <rect x="0" y="0" width="268" height="252" rx="12" fill="#161b22" stroke="#30363d"/>
+
+    <text x="20" y="28" class="mono" font-size="9.5" fill="#d29922" letter-spacing="1">01 · BUSINESS BI</text>
+    <text x="20" y="52" class="sans" font-size="16" font-weight="700" fill="#e6edf3">Retail Customer</text>
+    <text x="20" y="72" class="sans" font-size="16" font-weight="700" fill="#e6edf3">Analysis</text>
+
+    <text x="20" y="96" class="sans" font-size="11.5" fill="#8b949e">Cleaned data, engineered features,</text>
+    <text x="20" y="112" class="sans" font-size="11.5" fill="#8b949e">designed SQL schema, built Power BI</text>
+    <text x="20" y="128" class="sans" font-size="11.5" fill="#8b949e">dashboard for revenue and RFM</text>
+    <text x="20" y="144" class="sans" font-size="11.5" fill="#8b949e">segmentation KPIs.</text>
+
+    <!-- Mini bar chart -->
+    <g transform="translate(20, 158)">
+      <line x1="0" y1="60" x2="228" y2="60" stroke="#21262d"/>
+      <rect class="barGrow b1" x="8" y="38" width="36" height="22" rx="3" fill="#58a6ff"/>
+      <rect class="barGrow b2" x="56" y="24" width="36" height="36" rx="3" fill="#bc8cff"/>
+      <rect class="barGrow b3" x="104" y="12" width="36" height="48" rx="3" fill="#d29922"/>
+      <rect class="barGrow b4" x="152" y="2" width="36" height="58" rx="3" fill="#3fb950"/>
+    </g>
+
+    <text x="20" y="240" class="mono" font-size="10" fill="#484f58">Python · SQL · Power BI · DAX</text>
+  </g>
+
+  <!-- CARD 2: NutriGPT -->
+  <g class="fadeUp d2">
+    <rect x="284" y="0" width="268" height="252" rx="12" fill="#161b22" stroke="#30363d"/>
+
+    <text x="304" y="28" class="mono" font-size="9.5" fill="#3fb950" letter-spacing="1">02 · RAG ENGINE</text>
+    <text x="304" y="52" class="sans" font-size="16" font-weight="700" fill="#e6edf3">NutriGPT</text>
+
+    <text x="304" y="80" class="sans" font-size="11.5" fill="#8b949e">End-to-end RAG pipeline with</text>
+    <text x="304" y="96" class="sans" font-size="11.5" fill="#8b949e">HuggingFace embeddings, ChromaDB</text>
+    <text x="304" y="112" class="sans" font-size="11.5" fill="#8b949e">vector storage, and Groq Llama-3</text>
+    <text x="304" y="128" class="sans" font-size="11.5" fill="#8b949e">for nutrition Q&amp;A.</text>
+
+    <!-- RAG flow visualization -->
+    <g transform="translate(304, 146)">
+      <!-- Query box -->
+      <rect width="228" height="22" rx="5" fill="#0d1117" stroke="#21262d"/>
+      <text x="10" y="15" class="mono" font-size="9.5" fill="#c9d1d9">query: iron-rich foods</text>
+
+      <!-- Vector matches -->
+      <rect y="30" width="94" height="16" rx="4" fill="rgba(63,185,80,0.10)" stroke="#3fb950" stroke-opacity=".5"/>
+      <text x="8" y="42" class="mono" font-size="8.5" fill="#3fb950">▸ match · 0.94</text>
+      <rect y="50" width="94" height="14" rx="4" fill="#0d1117" stroke="#21262d"/>
+      <rect y="68" width="94" height="14" rx="4" fill="#0d1117" stroke="#21262d"/>
+
+      <!-- Arrow -->
+      <line x1="102" y1="48" x2="130" y2="48" stroke="#484f58" stroke-dasharray="2 3"/>
+
+      <!-- Response lines -->
+      <rect x="134" y="30" width="94" height="56" rx="6" fill="#0d1117" stroke="#21262d"/>
+      <line class="typeLine tl1" pathLength="100" x1="144" y1="46" x2="218" y2="46" stroke="#3fb950" stroke-width="2.5" stroke-linecap="round"/>
+      <line class="typeLine tl2" pathLength="100" x1="144" y1="58" x2="206" y2="58" stroke="#3fb950" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+      <line class="typeLine tl3" pathLength="100" x1="144" y1="70" x2="190" y2="70" stroke="#3fb950" stroke-width="2.5" stroke-linecap="round" opacity=".45"/>
+    </g>
+
+    <text x="304" y="240" class="mono" font-size="10" fill="#484f58">LangChain · ChromaDB · Llama-3</text>
+  </g>
+
+  <!-- CARD 3: WellNest AI -->
+  <g class="fadeUp d3">
+    <rect x="568" y="0" width="268" height="252" rx="12" fill="#161b22" stroke="#30363d"/>
+
+    <text x="588" y="28" class="mono" font-size="9.5" fill="#bc8cff" letter-spacing="1">03 · AI APP</text>
+    <text x="588" y="52" class="sans" font-size="16" font-weight="700" fill="#e6edf3">WellNest AI</text>
+
+    <text x="588" y="80" class="sans" font-size="11.5" fill="#8b949e">Mental health companion with</text>
+    <text x="588" y="96" class="sans" font-size="11.5" fill="#8b949e">mood tracking, journaling, NLP</text>
+    <text x="588" y="112" class="sans" font-size="11.5" fill="#8b949e">sentiment analysis, and auto</text>
+    <text x="588" y="128" class="sans" font-size="11.5" fill="#8b949e">PDF/CSV report generation.</text>
+
+    <!-- Mood curve visualization -->
+    <g transform="translate(588, 146)">
+      <rect width="228" height="72" rx="6" fill="#0d1117" stroke="#21262d"/>
+
+      <!-- Subtle horizontal guides -->
+      <line x1="12" y1="24" x2="216" y2="24" stroke="#21262d" stroke-dasharray="2 4" opacity=".5"/>
+      <line x1="12" y1="48" x2="216" y2="48" stroke="#21262d" stroke-dasharray="2 4" opacity=".5"/>
+
+      <!-- Mood curve -->
+      <path d="M 16 52 C 40 60, 56 24, 80 36 C 104 48, 120 16, 152 28 C 170 34, 186 20, 212 24"
+            fill="none" stroke="#bc8cff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+            class="spark" style="animation-duration:2.5s;animation-delay:.4s"/>
+
+      <!-- Data points -->
+      <circle cx="80" cy="36" r="3" fill="#bc8cff" class="fadeUp d3"/>
+      <circle cx="152" cy="28" r="3" fill="#bc8cff" class="fadeUp d4"/>
+      <circle cx="212" cy="24" r="3.5" fill="#f778ba" class="fadeUp d4"/>
+
+      <text x="12" y="66" class="mono" font-size="8" fill="#484f58">mood log</text>
+      <text x="216" y="66" text-anchor="end" class="mono" font-size="8" fill="#bc8cff">↑ improving</text>
+    </g>
+
+    <text x="588" y="240" class="mono" font-size="10" fill="#484f58">React · FastAPI · MongoDB · NVIDIA</text>
+  </g>
+</svg>
