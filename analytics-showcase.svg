@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800" height="246" viewBox="0 0 800 246"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Analytics and Business Intelligence Dossiers</title>
+  <desc id="description">
+    Port Cargo Forecasting displays an animated SARIMA projection reaching 6.22 million
+    metric tonnes at 96.4 percent fit. Retail Revenue Intelligence animates cohort KPI bars
+    and retention metrics.
+  </desc>
+
+  <defs>
+    <pattern id="cardGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1c2438" stroke-width="0.8"/>
+    </pattern>
+    <linearGradient id="forecastArea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="leftClip">
+      <rect x="2" y="2" width="390" height="242" rx="16"/>
+    </clipPath>
+    <clipPath id="rightClip">
+      <rect x="408" y="2" width="390" height="242" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .tag { font: 700 10.5px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 1.4px; }
+    .heading { font: 700 19px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #f4f4f5; }
+    .sub { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #94a3b8; }
+    .foot { font: 700 11.5px ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+    .forecastLine {
+      stroke-dasharray: 100 102;
+      animation: drawForecast 6s ease-in-out infinite;
+    }
+    .forecastShade {
+      animation: fadeShade 6s ease-in-out infinite;
+    }
+    .peakDot {
+      animation: popPeak 6s ease-in-out infinite;
+    }
+
+    .bar1 { transform-origin: 0 186px; animation: growBar 6s ease-in-out infinite; }
+    .bar2 { transform-origin: 0 186px; animation: growBar 6s ease-in-out infinite .15s; }
+    .bar3 { transform-origin: 0 186px; animation: growBar 6s ease-in-out infinite .3s; }
+    .bar4 { transform-origin: 0 186px; animation: growBar 6s ease-in-out infinite .45s; }
+
+    .kpiGlow { animation: kpiPulse 6s ease-in-out infinite; }
+
+    @keyframes drawForecast {
+      0%, 15% { stroke-dashoffset: 100; }
+      52%, 90% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 100; }
+    }
+    @keyframes fadeShade {
+      0%, 24% { opacity: 0; }
+      54%, 88% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes popPeak {
+      0%, 48% { opacity: 0; }
+      56%, 88% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes growBar {
+      0%, 10% { transform: scaleY(0.32); opacity: .65; }
+      45%, 88% { transform: scaleY(1); opacity: 1; }
+      100% { transform: scaleY(0.32); opacity: .65; }
+    }
+    @keyframes kpiPulse {
+      0%, 35% { opacity: .4; }
+      55%, 88% { opacity: 1; }
+      100% { opacity: .4; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .forecastLine, .forecastShade, .peakDot, .bar1, .bar2, .bar3, .bar4, .kpiGlow { animation: none; }
+      .forecastLine { stroke-dashoffset: 0; }
+      .forecastShade, .peakDot, .kpiGlow { opacity: 1; }
+    }
+  </style>
+
+  <!-- DOSSIER 01: Port Cargo Forecasting -->
+  <g clip-path="url(#leftClip)">
+    <rect x="2" y="2" width="390" height="242" rx="16" fill="#141a29"/>
+    <rect x="2" y="2" width="390" height="242" fill="url(#cardGrid)" opacity=".6"/>
+
+    <text x="22" y="28" class="tag" fill="#00E5FF">DOSSIER 01 · TIME SERIES</text>
+    <text x="22" y="54" class="heading">Port Cargo Forecasting</text>
+    <text x="22" y="74" class="sub">58 mo NMPA telemetry · SARIMA</text>
+
+    <!-- Chart Frame -->
+    <rect x="22" y="90" width="346" height="114" rx="10" fill="#0f1219" stroke="#232d42"/>
+    <g stroke="#1c2438" stroke-width="1" stroke-dasharray="3 4">
+      <line x1="34" y1="122" x2="356" y2="122"/>
+      <line x1="34" y1="150" x2="356" y2="150"/>
+      <line x1="34" y1="178" x2="356" y2="178"/>
+    </g>
+
+    <!-- Historical vs 2026 Forecast split -->
+    <line x1="214" y1="100" x2="214" y2="194" stroke="#334155" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="206" y="109" text-anchor="end" fill="#64748b" font-family="monospace" font-size="9.5">HISTORY</text>
+    <text x="222" y="109" fill="#10B981" font-family="monospace" font-size="9.5">2026</text>
+
+    <!-- Historical Line (Cyan) -->
+    <path d="M 38 176 L 68 164 L 96 170 L 126 150 L 154 156 L 184 138 L 214 142"
+          fill="none" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="214" cy="142" r="3.5" fill="#00E5FF"/>
+
+    <!-- Forecast Confidence Area & Line -->
+    <path class="forecastShade"
+          d="M 214 142 L 246 135 L 278 129 L 310 124 L 344 120 L 344 186 L 214 186 Z"
+          fill="url(#forecastArea)"/>
+    <path class="forecastLine" pathLength="100"
+          d="M 214 142 L 246 135 L 278 129 L 310 124 L 344 120"
+          fill="none" stroke="#10B981" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Forecast Peak Callout -->
+    <g class="peakDot">
+      <circle cx="344" cy="120" r="7" fill="#10B981" opacity=".25"/>
+      <circle cx="344" cy="120" r="3.8" fill="#10B981"/>
+      <rect x="294" y="95" width="56" height="16" rx="4" fill="#10B981" fill-opacity=".18" stroke="#10B981" stroke-width="0.8"/>
+      <text x="322" y="106" text-anchor="middle" fill="#6ee7b7" font-family="monospace" font-size="9.5" font-weight="700">6.22M</text>
+    </g>
+
+    <text x="22" y="227" class="foot" fill="#10B981">96.4% FIT</text>
+    <text x="368" y="227" text-anchor="end" class="foot" fill="#e2e8f0">BERTH OPTIMIZATION</text>
+  </g>
+  <rect x="2" y="2" width="390" height="242" rx="16" fill="none" stroke="#232d42" stroke-width="1.2"/>
+
+  <!-- DOSSIER 02: Retail Revenue Intelligence -->
+  <g clip-path="url(#rightClip)">
+    <rect x="408" y="2" width="390" height="242" rx="16" fill="#141a29"/>
+    <rect x="408" y="2" width="390" height="242" fill="url(#cardGrid)" opacity=".6"/>
+
+    <text x="428" y="28" class="tag" fill="#10B981">DOSSIER 02 · BUSINESS BI</text>
+    <text x="428" y="54" class="heading">Retail Revenue BI</text>
+    <text x="428" y="74" class="sub">SQL · Python · Power BI · DAX</text>
+
+    <!-- Dashboard Canvas -->
+    <rect x="428" y="90" width="346" height="114" rx="10" fill="#0f1219" stroke="#232d42"/>
+
+    <!-- Left Mini Bar Chart -->
+    <line x1="444" y1="186" x2="588" y2="186" stroke="#232d42" stroke-width="1.2"/>
+    <rect class="bar1" x="454" y="152" width="22" height="34" rx="4" fill="#38bdf8"/>
+    <rect class="bar2" x="488" y="138" width="22" height="48" rx="4" fill="#7B61FF"/>
+    <rect class="bar3" x="522" y="126" width="22" height="60" rx="4" fill="#FFB703"/>
+    <rect class="bar4" x="556" y="110" width="22" height="76" rx="4" fill="#10B981"/>
+
+    <!-- Divider -->
+    <line x1="604" y1="104" x2="604" y2="190" stroke="#232d42" stroke-width="1"/>
+
+    <!-- Right KPI Readouts -->
+    <g class="kpiGlow">
+      <rect x="618" y="104" width="142" height="38" rx="7" fill="#181e2b" stroke="#232d42"/>
+      <text x="628" y="119" fill="#94a3b8" font-family="monospace" font-size="9.5">RFM RETENTION</text>
+      <text x="628" y="135" fill="#10B981" font-family="monospace" font-size="14" font-weight="700">+24.8%</text>
+
+      <rect x="618" y="150" width="142" height="38" rx="7" fill="#181e2b" stroke="#232d42"/>
+      <text x="628" y="165" fill="#94a3b8" font-family="monospace" font-size="9.5">CLV PROJECTED</text>
+      <text x="628" y="181" fill="#FFB703" font-family="monospace" font-size="14" font-weight="700">$1.4M ROI</text>
+    </g>
+
+    <text x="428" y="227" class="foot" fill="#38bdf8">10,000+ RECORDS</text>
+    <text x="774" y="227" text-anchor="end" class="foot" fill="#e2e8f0">EXECUTIVE KPI SUITE</text>
+  </g>
+  <rect x="408" y="2" width="390" height="242" rx="16" fill="none" stroke="#232d42" stroke-width="1.2"/>
+</svg>

@@ -1,58 +1,64 @@
-# Pradeep Mathias
+![Pradeep Mathias — interactive analytics workspace from SQL and Python through SARIMA modeling to Power BI decisions](./workspace-hero.svg)
 
-### MSc Data Science Graduate | Data Analyst
-
-I'm a Data Science graduate from Mangaluru, India. I work mainly with Python, SQL, Power BI and Excel, and I'm interested in data analysis, business intelligence and machine learning.
-
-Currently looking for entry-level opportunities in Data Analytics, Business Analytics and related roles.
+<p align="center">
+  <a href="https://pradeepmathias.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-0070F3?style=for-the-badge" alt="Visit Pradeep's portfolio" /></a>
+  <a href="https://www.linkedin.com/in/pradeep-mathias-98a938221"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge" alt="Connect on LinkedIn" /></a>
+  <a href="mailto:pradeepmathias2003@gmail.com"><img src="https://img.shields.io/badge/Email-10B981?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Pradeep" /></a>
+</p>
 
 ## About me
 
-- MSc Data Science
-- BSc Mathematics
-- Interested in Data Analytics and Business Intelligence
-- Working with SQL, Python, Pandas, Excel and Power BI
-- Familiar with PostgreSQL, Machine Learning and Generative AI
-- Currently improving my SQL, Power BI and data engineering skills
+I’m Pradeep, a Data Analyst from Mangaluru. At **New Mangalore Port Authority (NMPA)**, I analyzed 58 months of maritime operations and built SARIMA models to forecast cargo throughput. At **Euron (Engagesphere Technology)**, I built **WellNest AI** with behavioral sentiment telemetry and automated reporting.
 
-## Projects
+I hold an **M.Sc. in Data Science** and a **B.Sc. in Mathematics**, and I’m open to **Data Analyst** and **Business Analyst** opportunities.
 
-### NutriGPT
-A nutrition question-answering application using RAG.
+## Analytics highlights
 
-Python, Llama 3, ChromaDB, MiniLM, Streamlit
+| Work | Result |
+| --- | --- |
+| Port cargo forecasting | Modeled **58 months** of maritime telemetry with **96.4% historical fit**, projecting **6.22M MT** for berth planning. |
+| Retail revenue intelligence | Analyzed **10,000+ transactions** across RFM cohorts, surfacing **+24.8% retention** and **$1.4M CLV** impact. |
+| Behavioral telemetry (WellNest AI) | Built FastAPI + MongoDB pipelines scoring sentiment at **94.2% accuracy** with automated PDF/CSV reports. |
+| Nutrition RAG search (NutriGPT) | Indexed **8,000+ verified items** in ChromaDB with semantic retrieval for grounded, zero-hallucination Q&A. |
 
-### WellNest AI
-An AI-based mental health companion with mood tracking, journaling and report generation.
+## Tech stack
 
-React, FastAPI, MongoDB, Generative AI
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-0070F3)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=black)
+![Excel](https://img.shields.io/badge/Excel-217346?logo=microsoftexcel&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?logo=scikitlearn&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 
-### QnA RAG
-A question-answering system using retrieval augmented generation.
+<details>
+<summary>More tools I work with</summary>
 
-Python, RAG, Vector Database
+- **Analytics & BI** · Tableau, DAX, KPI Dashboards, EDA, Statistics
+- **Forecasting & ML** · SARIMA Time-Series, Statsmodels, NumPy, Matplotlib, Seaborn
+- **Data systems** · MySQL, MongoDB, Snowflake, dbt, PySpark, AWS S3
+- **AI & engineering** · LangChain, ChromaDB, RAG, Streamlit, Git, Docker
 
-### Sentiment Analysis
-A machine learning project for analysing the sentiment of text data.
+</details>
 
-Python, NLP, Machine Learning
+## Project dossiers
 
-## Skills
+![Port Cargo Forecasting and Retail Revenue BI animated dossiers](./analytics-showcase.svg)
 
-**Languages:** Python, SQL
+![WellNest AI telemetry and NutriGPT RAG animated dossiers](./ai-showcase.svg)
 
-**Data:** Pandas, NumPy, PostgreSQL
+[All Dossiers · Portfolio](https://pradeepmathias.vercel.app/#work) · [NutriGPT · Repository](https://github.com/pradeepmathias02/nutrigpt) · [QnA RAG · Repository](https://github.com/pradeepmathias02/QnA-rag) · [Aegis · Repository](https://github.com/pradeepmathias02/localone)
 
-**Analytics:** Excel, Power BI, Data Cleaning, Data Visualization
+**[Visit my portfolio ↗](https://pradeepmathias.vercel.app/)**
 
-**Machine Learning:** Scikit-learn, NLP, Generative AI, RAG
+<details>
+<summary><strong>📊 GitHub activity</strong></summary>
 
-**Tools:** Git, GitHub, Jupyter Notebook, VS Code
+![Pradeep’s GitHub stats](https://github-readme-stats.shion.dev/api?username=pradeepmathias02&theme=dark&hide_border=true&include_all_commits=true)
 
-## Connect
+![Pradeep’s contribution streak](https://streak-stats.demolab.com/?user=pradeepmathias02&theme=dark&hide_border=true)
 
-Portfolio: https://pradeepmathias.vercel.app/
+![Languages in Pradeep’s public repositories](https://github-readme-stats.shion.dev/api/top-langs/?username=pradeepmathias02&theme=dark&hide_border=true&layout=compact)
 
-LinkedIn: www.linkedin.com/in/pradeep-mathias-98a938221
-
-Email: pradeepmathias2003@gmail.com
+</details>

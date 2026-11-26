@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800" height="246" viewBox="0 0 800 246"
+     role="img" aria-labelledby="title desc">
+  <title id="title">AI and Behavioral Telemetry Dossiers</title>
+  <desc id="description">
+    WellNest AI animates a behavioral sentiment pulse and automated wellness report generation.
+    NutriGPT highlights a matching nutrition vector passage and writes a grounded answer.
+  </desc>
+
+  <defs>
+    <pattern id="cardGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1c2438" stroke-width="0.8"/>
+    </pattern>
+    <linearGradient id="moodGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7B61FF"/>
+      <stop offset="100%" stop-color="#FF007A"/>
+    </linearGradient>
+    <clipPath id="leftClip">
+      <rect x="2" y="2" width="390" height="242" rx="16"/>
+    </clipPath>
+    <clipPath id="rightClip">
+      <rect x="408" y="2" width="390" height="242" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .tag { font: 700 10.5px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 1.4px; }
+    .heading { font: 700 19px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #f4f4f5; }
+    .sub { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #94a3b8; }
+    .small { font: 11.5px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #cbd5e1; }
+    .foot { font: 700 11.5px ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+    /* WellNest AI animations */
+    .moodPulse { stroke-dasharray: 100 102; animation: traceMood 6s ease-in-out infinite; }
+    .reportLine { stroke-dasharray: 100 102; animation: drawReport 6s ease infinite; }
+    .r2 { animation-delay: .18s; }
+    .r3 { animation-delay: .36s; }
+
+    /* NutriGPT animations */
+    .source { animation: selectSource 6s ease infinite; }
+    .packet { animation: sendPacket 6s ease-in-out infinite; }
+    .answer { stroke-dasharray: 100 102; animation: writeAnswer 6s ease infinite; }
+    .a2 { animation-delay: .18s; }
+    .a3 { animation-delay: .36s; }
+
+    @keyframes traceMood {
+      0%, 10% { stroke-dashoffset: 100; }
+      48%, 90% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 100; }
+    }
+    @keyframes drawReport {
+      0%, 42% { stroke-dashoffset: 100; opacity: 0; }
+      45% { stroke-dashoffset: 100; opacity: 1; }
+      65%, 90% { stroke-dashoffset: 0; opacity: 1; }
+      100% { stroke-dashoffset: 0; opacity: 0; }
+    }
+    @keyframes selectSource {
+      0%, 12% { opacity: .12; }
+      25%, 78% { opacity: 1; }
+      95%, 100% { opacity: .12; }
+    }
+    @keyframes sendPacket {
+      0%, 26% { transform: translateX(0); opacity: 0; }
+      30% { transform: translateX(0); opacity: 1; }
+      46% { transform: translateX(38px); opacity: 1; }
+      50%, 100% { transform: translateX(38px); opacity: 0; }
+    }
+    @keyframes writeAnswer {
+      0%, 46% { stroke-dashoffset: 100; opacity: 0; }
+      48% { stroke-dashoffset: 100; opacity: 1; }
+      68%, 90% { stroke-dashoffset: 0; opacity: 1; }
+      100% { stroke-dashoffset: 0; opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .moodPulse, .reportLine, .source, .packet, .answer { animation: none; }
+      .moodPulse, .reportLine, .answer { stroke-dashoffset: 0; opacity: 1; }
+      .source { opacity: 1; }
+      .packet { opacity: 0; }
+    }
+  </style>
+
+  <!-- DOSSIER 03: WellNest AI -->
+  <g clip-path="url(#leftClip)">
+    <rect x="2" y="2" width="390" height="242" rx="16" fill="#141a29"/>
+    <rect x="2" y="2" width="390" height="242" fill="url(#cardGrid)" opacity=".6"/>
+
+    <text x="22" y="28" class="tag" fill="#FF007A">DOSSIER 03 · PRODUCT TELEMETRY</text>
+    <text x="22" y="54" class="heading">WellNest AI</text>
+    <text x="22" y="74" class="sub">FastAPI · MongoDB · NVIDIA AI</text>
+
+    <rect x="22" y="90" width="346" height="114" rx="10" fill="#0f1219" stroke="#232d42"/>
+
+    <!-- Baseline wave -->
+    <path d="M 38 156 C 68 172, 92 128, 124 148 C 154 166, 180 120, 212 134 C 228 140, 240 132, 250 126"
+          fill="none" stroke="#232d42" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Animated Sentiment Wave -->
+    <path class="moodPulse" pathLength="100"
+          d="M 38 156 C 68 172, 92 128, 124 148 C 154 166, 180 120, 212 134 C 228 140, 240 132, 250 126"
+          fill="none" stroke="url(#moodGrad)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Nodes along wave -->
+    <circle cx="38" cy="156" r="3.5" fill="#7B61FF"/>
+    <circle cx="124" cy="148" r="3.5" fill="#a78bfa"/>
+    <circle cx="212" cy="134" r="4" fill="#FF007A"/>
+
+    <text x="38" y="188" fill="#64748b" font-family="monospace" font-size="9.5">MOOD LOG</text>
+    <text x="124" y="188" fill="#94a3b8" font-family="monospace" font-size="9.5">NLP</text>
+    <text x="196" y="188" fill="#f472b6" font-family="monospace" font-size="9.5">TREND</text>
+
+    <!-- Automated Report Card -->
+    <rect x="264" y="106" width="88" height="82" rx="8" fill="#181e2b" stroke="#7B61FF" stroke-opacity="0.7"/>
+    <text x="274" y="124" fill="#c4b5fd" font-family="monospace" font-size="9.5" font-weight="700">REPORT.PDF</text>
+    <g fill="none" stroke="#FF007A" stroke-width="3.5" stroke-linecap="round">
+      <path class="reportLine" pathLength="100" d="M275 140 h62"/>
+      <path class="reportLine r2" pathLength="100" d="M275 155 h48"/>
+      <path class="reportLine r3" pathLength="100" d="M275 170 h56"/>
+    </g>
+
+    <text x="22" y="227" class="foot" fill="#FF007A">94.2% SENTIMENT</text>
+    <text x="368" y="227" text-anchor="end" class="foot" fill="#e2e8f0">+18.4% MOOD SHIFT</text>
+  </g>
+  <rect x="2" y="2" width="390" height="242" rx="16" fill="none" stroke="#232d42" stroke-width="1.2"/>
+
+  <!-- DOSSIER 04: NutriGPT -->
+  <g clip-path="url(#rightClip)">
+    <rect x="408" y="2" width="390" height="242" rx="16" fill="#141a29"/>
+    <rect x="408" y="2" width="390" height="242" fill="url(#cardGrid)" opacity=".6"/>
+
+    <text x="428" y="28" class="tag" fill="#10B981">DOSSIER 04 · RAG ENGINE</text>
+    <text x="428" y="54" class="heading">NutriGPT</text>
+    <text x="428" y="74" class="sub">Llama 3 · ChromaDB · LangChain</text>
+
+    <rect x="428" y="90" width="346" height="114" rx="10" fill="#0f1219" stroke="#232d42"/>
+
+    <!-- Query Bar -->
+    <rect x="442" y="102" width="318" height="24" rx="6" fill="#181e2b" stroke="#232d42"/>
+    <text x="452" y="118" class="small">Which foods contain iron?</text>
+
+    <!-- Vector Source Passages -->
+    <g fill="#181e2b" stroke="#2c3852">
+      <rect x="442" y="136" width="118" height="14" rx="4"/>
+      <rect x="442" y="154" width="118" height="14" rx="4"/>
+      <rect x="442" y="172" width="118" height="14" rx="4"/>
+    </g>
+    <rect class="source" x="442" y="154" width="118" height="14" rx="4"
+          fill="#10B981" fill-opacity=".22" stroke="#10B981"/>
+    <g stroke="#94a3b8" stroke-width="2" stroke-linecap="round">
+      <path d="M450 143 h58 M450 161 h86 M450 179 h44"/>
+    </g>
+
+    <!-- Transfer Connector & Packet -->
+    <path d="M562 161 h46" stroke="#334155" stroke-dasharray="3 4"/>
+    <circle class="packet" cx="566" cy="161" r="3.8" fill="#10B981"/>
+
+    <!-- Grounded Answer Box -->
+    <rect x="610" y="136" width="150" height="50" rx="8" fill="#181e2b" stroke="#10B981" stroke-opacity=".7"/>
+    <g fill="none" stroke="#6ee7b7" stroke-width="3.5" stroke-linecap="round">
+      <path class="answer" pathLength="100" d="M622 149 h110"/>
+      <path class="answer a2" pathLength="100" d="M622 161 h88"/>
+      <path class="answer a3" pathLength="100" d="M622 173 h64"/>
+    </g>
+
+    <text x="428" y="227" class="foot" fill="#10B981">8,000+ ITEMS</text>
+    <text x="774" y="227" text-anchor="end" class="foot" fill="#e2e8f0">0% HALLUCINATION</text>
+  </g>
+  <rect x="408" y="2" width="390" height="242" rx="16" fill="none" stroke="#232d42" stroke-width="1.2"/>
+</svg>
