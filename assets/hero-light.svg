@@ -1,146 +1,200 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="836" height="280" viewBox="0 0 836 280"
-     role="img" aria-label="Pradeep Mathias — Business Analyst">
+     width="840" height="268" viewBox="0 0 840 268"
+     role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Pradeep Mathias — Business &amp; Data Analyst Workspace</title>
+  <desc id="hero-desc">
+    Figma workspace hero banner from pradeepmathias.vercel.app featuring the animated
+    PRADEEP MATHIAS letter tiles inside a Figma selection bounding box with live cursor
+    and smooth Framer Motion stagger easing.
+  </desc>
+
+  <defs>
+    <pattern id="heroDots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.85" fill="#d0d7de" opacity="0.65"/>
+    </pattern>
+    <linearGradient id="heroCardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbfcfd" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#f3f6f9" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="heroBorderGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
 
   <style>
     .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Noto Sans, Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
-    .spark { stroke-dasharray: 200; stroke-dashoffset: 200; animation: draw 3s cubic-bezier(.4,0,.2,1) forwards; }
-    .fadeUp { opacity: 0; animation: fadeUp .6s ease forwards; }
-    .d1 { animation-delay: .2s } .d2 { animation-delay: .4s } .d3 { animation-delay: .6s }
-    .d4 { animation-delay: .8s } .d5 { animation-delay: 1s }
-    .pulse { animation: pulse 3s ease-in-out infinite; }
-    @keyframes draw { to { stroke-dashoffset: 0 } }
-    @keyframes fadeUp { to { opacity: 1; transform: translateY(0) } }
-    @keyframes pulse { 0%,100% { opacity: .6 } 50% { opacity: 1 } }
+
+    /* Smooth Framer Motion spring-like stagger on portfolio letter tiles */
+    .tile { animation: springFloat 4.8s cubic-bezier(0.22, 1, 0.36, 1) infinite; }
+    .t1 { animation-delay: 0.00s; }
+    .t2 { animation-delay: 0.14s; }
+    .t3 { animation-delay: 0.28s; }
+    .t4 { animation-delay: 0.42s; }
+    .t5 { animation-delay: 0.56s; }
+    .t6 { animation-delay: 0.70s; }
+    .t7 { animation-delay: 0.84s; }
+
+    @keyframes springFloat {
+      0%, 100% { transform: translateY(0px); }
+      45% { transform: translateY(-4.5px); }
+    }
+
+    /* Smooth multiplayer cursor inspecting the selection box handles (never crosses text) */
+    .figCursor {
+      animation: glideFigCursor 9.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    }
+    @keyframes glideFigCursor {
+      0%, 14%   { transform: translate(672px, 162px); }
+      38%, 54%  { transform: translate(674px, 74px); }
+      74%, 86%  { transform: translate(626px, 166px); }
+      100%      { transform: translate(672px, 162px); }
+    }
+
+    /* Subtle pulse on live availability dot */
+    .statusPulse {
+      animation: statusBeacon 2.6s ease-in-out infinite;
+    }
+    @keyframes statusBeacon {
+      0%, 100% { transform: scale(1); opacity: 0.95; }
+      50%      { transform: scale(1.45); opacity: 0.35; }
+    }
+
+    /* Shimmer sweep along Figma selection border */
+    .frameSweep {
+      stroke-dasharray: 90 1180;
+      animation: frameLoop 6.5s linear infinite;
+    }
+    @keyframes frameLoop {
+      from { stroke-dashoffset: 1270; }
+      to   { stroke-dashoffset: 0; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      .spark { animation: none; stroke-dashoffset: 0 }
-      .fadeUp { animation: none; opacity: 1 }
-      .pulse { animation: none; opacity: .8 }
+      .tile, .figCursor, .statusPulse, .frameSweep { animation: none; }
+      .figCursor { transform: translate(654px, 152px); }
+      .frameSweep { opacity: 0; }
     }
   </style>
 
-  <!-- Left half: Identity -->
-  <g>
-    <!-- Name -->
-    <text x="32" y="52" class="sans" font-size="28" font-weight="700" fill="#1f2328" letter-spacing="-0.5">
-      Pradeep Mathias
+  <!-- Architectural Figma Canvas Surface (blends naturally into GitHub) -->
+  <rect x="0.5" y="0.5" width="839" height="267" rx="16"
+        fill="url(#heroCardGrad)" stroke="url(#heroBorderGrad)" stroke-width="1"/>
+  <rect x="1" y="1" width="838" height="266" rx="15.5" fill="url(#heroDots)"/>
+
+  <!-- Top Workspace Chrome Bar -->
+  <g transform="translate(24, 24)">
+    <circle cx="5" cy="0" r="3.5" fill="#059669"/>
+    <circle cx="5" cy="0" r="3.5" fill="#059669" class="statusPulse" style="transform-box:fill-box;transform-origin:center;"/>
+    <text x="17" y="4" class="mono" font-size="11" fill="#475569">
+      pradeep_workspace.fig <tspan fill="#64748b">/ Hero</tspan>
     </text>
-    <text x="32" y="78" class="mono" font-size="13" fill="#656d76">
-      Business Analyst  ·  Mangaluru, India
-    </text>
 
-    <!-- Separator -->
-    <line x1="32" y1="96" x2="380" y2="96" stroke="#d0d7de" stroke-dasharray="3 3"/>
-
-    <!-- Role badges — muted, tasteful -->
-    <g class="fadeUp d1" transform="translate(0,-4)">
-      <rect x="32" y="112" width="52" height="22" rx="4" fill="rgba(9,105,218,0.06)" stroke="#e5e7eb"/>
-      <text x="58" y="127" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#0969da">SQL</text>
-
-      <rect x="92" y="112" width="74" height="22" rx="4" fill="rgba(9,105,218,0.06)" stroke="#e5e7eb"/>
-      <text x="129" y="127" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#0969da">Power BI</text>
-
-      <rect x="174" y="112" width="66" height="22" rx="4" fill="rgba(9,105,218,0.06)" stroke="#e5e7eb"/>
-      <text x="207" y="127" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#0969da">Python</text>
-
-      <rect x="248" y="112" width="54" height="22" rx="4" fill="rgba(9,105,218,0.06)" stroke="#e5e7eb"/>
-      <text x="275" y="127" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#0969da">Excel</text>
-    </g>
-
-    <!-- Education -->
-    <g class="fadeUp d2">
-      <text x="32" y="162" class="sans" font-size="13" font-weight="600" fill="#32383f">
-        MSc Data Science
-        <tspan fill="#656d76" font-weight="400"> · AIMIT · 8.5 CGPA</tspan>
-      </text>
-      <text x="32" y="182" class="sans" font-size="13" font-weight="600" fill="#32383f">
-        BSc Mathematics
-        <tspan fill="#656d76" font-weight="400"> · St. Aloysius College</tspan>
-      </text>
-    </g>
-
-    <!-- Experience -->
-    <g class="fadeUp d3">
-      <text x="32" y="214" class="mono" font-size="10.5" fill="#afb8c1" letter-spacing="1.5">EXPERIENCE</text>
-      <text x="32" y="234" class="sans" font-size="12.5" fill="#32383f">
-        <tspan font-weight="600">NMPA</tspan>
-        <tspan fill="#656d76"> Data Analyst Intern · Jan–Mar 2026</tspan>
-      </text>
-      <text x="32" y="252" class="sans" font-size="12.5" fill="#32383f">
-        <tspan font-weight="600">Euron</tspan>
-        <tspan fill="#656d76"> AI Developer Intern · Jan–Apr 2026</tspan>
+    <g transform="translate(792, 0)" text-anchor="end">
+      <text x="0" y="4" class="mono" font-size="11" fill="#64748b">
+        Mangaluru, IN  ·  <tspan fill="#475569">Zoom 100% · 60fps</tspan>
       </text>
     </g>
   </g>
 
-  <!-- Right half: SARIMA forecast mini-card -->
-  <g transform="translate(440, 16)">
-    <rect width="380" height="248" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <!-- Subtle Hairline Divider under Chrome Bar -->
+  <line x1="20" y1="40" x2="820" y2="40" stroke="#edf1f5" stroke-width="1"/>
 
-    <!-- Card header -->
-    <text x="24" y="32" class="mono" font-size="10" fill="#afb8c1" letter-spacing="1.5">NMPA · PORT CARGO FORECAST</text>
-    <circle class="pulse" cx="348" cy="27" r="4" fill="#1a7f37"/>
+  <!-- Centered Portfolio Signature Banner: Figma Selection Box around [P][R][A][D][E][E][P] MATHIAS -->
+  <g>
+    <!-- Bounding Box -->
+    <rect x="170" y="54" width="500" height="134"
+          fill="rgba(0,112,243,0.05)" stroke="#0070f3" stroke-width="1.35"/>
+    <!-- Animated shimmer highlight traveling along selection border -->
+    <rect x="170" y="54" width="500" height="134"
+          fill="none" stroke="#0f172a" stroke-width="1.35" opacity="0.42" class="frameSweep"/>
 
-    <!-- Key metrics row -->
-    <g class="fadeUp d3">
-      <text x="24" y="60" class="sans" font-size="22" font-weight="700" fill="#1f2328">58</text>
-      <text x="52" y="60" class="sans" font-size="13" fill="#656d76"> months analysed</text>
-
-      <text x="220" y="60" class="sans" font-size="22" font-weight="700" fill="#1a7f37">96.4%</text>
-      <text x="290" y="60" class="sans" font-size="13" fill="#656d76"> fit</text>
+    <!-- 8 Crisp Figma Resize Handles -->
+    <g fill="#ffffff" stroke="#0070f3" stroke-width="1.4">
+      <rect x="166.5" y="50.5" width="7" height="7" rx="1"/>
+      <rect x="416.5" y="50.5" width="7" height="7" rx="1"/>
+      <rect x="666.5" y="50.5" width="7" height="7" rx="1"/>
+      <rect x="166.5" y="117.5" width="7" height="7" rx="1"/>
+      <rect x="666.5" y="117.5" width="7" height="7" rx="1"/>
+      <rect x="166.5" y="184.5" width="7" height="7" rx="1"/>
+      <rect x="416.5" y="184.5" width="7" height="7" rx="1"/>
+      <rect x="666.5" y="184.5" width="7" height="7" rx="1"/>
     </g>
 
-    <!-- Chart area -->
-    <rect x="24" y="78" width="332" height="120" rx="6" fill="#ffffff" stroke="#e5e7eb"/>
-
-    <!-- Grid lines -->
-    <g stroke="#e5e7eb" stroke-dasharray="2 4" opacity=".6">
-      <line x1="36" y1="108" x2="344" y2="108"/>
-      <line x1="36" y1="138" x2="344" y2="138"/>
-      <line x1="36" y1="168" x2="344" y2="168"/>
-    </g>
-
-    <!-- Historical / Forecast divider -->
-    <line x1="220" y1="84" x2="220" y2="192" stroke="#d0d7de" stroke-dasharray="4 3"/>
-    <text x="214" y="96" text-anchor="end" class="mono" font-size="9" fill="#afb8c1">history</text>
-    <text x="226" y="96" class="mono" font-size="9" fill="#1a7f37">forecast</text>
-
-    <!-- Historical sparkline (blue) -->
-    <polyline class="spark" style="animation-duration:2s"
-      points="40,172 72,160 104,164 138,146 170,150 200,136 220,138"
-      fill="none" stroke="#0969da" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <!-- Forecast sparkline (green, delayed) -->
-    <polyline class="spark" style="animation-delay:.8s"
-      points="220,138 248,131 276,124 304,118 328,112"
-      fill="none" stroke="#1a7f37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <!-- Forecast area fill -->
-    <path class="fadeUp d4"
-      d="M 220 138 L 248 131 L 276 124 L 304 118 L 328 112 L 328 185 L 220 185 Z"
-      fill="rgba(26,127,55,0.08)"/>
-
-    <!-- Peak -->
-    <g class="fadeUp d5">
-      <circle cx="328" cy="112" r="4" fill="#1a7f37"/>
-      <text x="328" y="102" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#1a7f37">6.22M MT</text>
-    </g>
-
-    <!-- Bottom label -->
-    <text x="24" y="218" class="mono" font-size="10" fill="#656d76">
-      SARIMA · Python · Statsmodels
-    </text>
-    <text x="356" y="218" text-anchor="end" class="mono" font-size="10" font-weight="600" fill="#32383f">
-      Berth Planning
+    <!-- Dimension Badge -->
+    <rect x="382" y="179" width="76" height="18" rx="4" fill="#0070f3"/>
+    <text x="420" y="191.5" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#ffffff">
+      500 × 134
     </text>
 
-    <!-- Certifications strip -->
-    <g class="fadeUp d4">
-      <line x1="24" y1="232" x2="356" y2="232" stroke="#e5e7eb"/>
-      <text x="24" y="244" class="mono" font-size="9" fill="#afb8c1">
-        HarvardX ML · Deloitte Analytics · Google AI · British Airways DS
-      </text>
+    <!-- Portfolio Signature Kinetic Letter Tiles: P R A D E E P -->
+    <g text-anchor="middle" class="sans" font-weight="800" font-size="27">
+      <g transform="translate(270 96)"><g class="tile t1"><g transform="rotate(-5)">
+        <rect x="-21" y="-23" width="42" height="46" rx="8" fill="#00E5FF"/>
+        <text y="9.5" fill="#090d16">P</text>
+      </g></g></g>
+
+      <g transform="translate(320 96)"><g class="tile t2"><g transform="rotate(4)">
+        <rect x="-21" y="-23" width="42" height="46" rx="8" fill="#FF2A4D"/>
+        <text y="9.5" fill="#ffffff">R</text>
+      </g></g></g>
+
+      <g transform="translate(370 96)"><g class="tile t3"><g transform="rotate(-4)">
+        <rect x="-21" y="-23" width="42" height="46" rx="8" fill="#FFB703"/>
+        <text y="9.5" fill="#090d16" font-family="Georgia, 'Times New Roman', serif" font-style="italic">A</text>
+      </g></g></g>
+
+      <g transform="translate(420 96)"><g class="tile t4"><g transform="rotate(3)">
+        <rect x="-21" y="-23" width="42" height="46" rx="8" fill="#10B981"/>
+        <text y="9.5" fill="#ffffff">D</text>
+      </g></g></g>
+
+      <g transform="translate(470 96)"><g class="tile t5"><g transform="rotate(-4)">
+        <rect x="-21" y="-23" width="42" height="46" rx="8" fill="#7B61FF"/>
+        <text y="9.5" fill="#ffffff">E</text>
+      </g></g></g>
+
+      <g transform="translate(520 96)"><g class="tile t6"><g transform="rotate(4)">
+        <rect x="-21" y="-23" width="42" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+        <text y="9.5" fill="#0f172a">E</text>
+      </g></g></g>
+
+      <g transform="translate(570 96)"><g class="tile t7"><g transform="rotate(-5)">
+        <rect x="-21" y="-23" width="42" height="46" rx="8" fill="#FF007A"/>
+        <text y="9.5" fill="#ffffff">P</text>
+      </g></g></g>
     </g>
+
+    <!-- MATHIAS Wordmark -->
+    <text x="420" y="160" text-anchor="middle" class="sans" font-size="28" font-weight="800" letter-spacing="6" fill="#0f172a">
+      MATHIAS
+    </text>
+  </g>
+
+  <!-- Role & Core Info Strip Beneath Frame -->
+  <text x="420" y="218" text-anchor="middle" class="mono" font-size="12.5" fill="#334155">
+    Business Analyst  <tspan fill="#64748b">|</tspan>  SQL · Power BI · Python · Excel
+  </text>
+
+  <!-- Minimal Credential Pills -->
+  <g transform="translate(154, 232)" class="mono" font-size="10.5">
+    <rect x="0" y="0" width="166" height="22" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="83" y="14.5" text-anchor="middle" fill="#475569">MSc Data Science · 8.5</text>
+
+    <rect x="176" y="0" width="174" height="22" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="263" y="14.5" text-anchor="middle" fill="#475569">NMPA &amp; Euron Internships</text>
+
+    <rect x="360" y="0" width="172" height="22" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <circle cx="374" cy="11" r="3" fill="#059669"/>
+    <text x="451" y="14.5" text-anchor="middle" fill="#334155">Open to BA / DA Roles</text>
+  </g>
+
+  <!-- Live Figma Multiplayer Cursor -->
+  <g class="figCursor">
+    <path d="M 0 0 L 0 14 L 4 10.5 L 7.5 16 L 9.5 15 L 6 9.5 L 11 9.5 Z"
+          fill="#0070f3" stroke="#ffffff" stroke-width="1.2" stroke-linejoin="round"/>
+    <rect x="11" y="12" width="52" height="17" rx="8.5" fill="#0070f3"/>
+    <text x="37" y="23.5" text-anchor="middle" class="sans" font-size="9.5" font-weight="700" fill="#ffffff">Pradeep</text>
   </g>
 </svg>

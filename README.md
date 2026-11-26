@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg" />
-    <img alt="Pradeep Mathias — Business Analyst with NMPA SARIMA forecast" src="./assets/hero-dark.svg" width="836" />
+    <img alt="Pradeep Mathias — Figma Workspace Hero Banner (Business & Data Analyst)" src="./assets/hero-dark.svg" width="840" />
   </picture>
 </p>
 
@@ -14,15 +14,27 @@
   <a href="mailto:pradeepmathias2003@gmail.com">pradeepmathias2003@gmail.com</a>
 </p>
 
+<br />
+
+I’m **Pradeep Mathias**, a Business & Data Analyst from Mangaluru (**MSc Data Science**, 8.5 CGPA · **BSc Mathematics**, 7.4 CGPA). I turn operational and behavioral datasets into **SARIMA forecasts**, **SQL & Power BI dashboards**, and **RAG pipelines** — previously interning at **New Mangalore Port Authority (NMPA)** and **Engagesphere (Euron)**.
+
 ---
 
-### Selected projects
+### Experience & selected work
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/projects-light.svg" />
-    <img alt="Retail Customer BI, NutriGPT RAG, and WellNest AI project cards" src="./assets/projects-dark.svg" width="836" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/work-analytics-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/work-analytics-light.svg" />
+    <img alt="NMPA Port Cargo SARIMA Forecasting and Retail Customer BI live motion showcases" src="./assets/work-analytics-dark.svg" width="840" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/work-ai-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/work-ai-light.svg" />
+    <img alt="WellNest AI Sentiment Telemetry and NutriGPT RAG Assistant live motion showcases" src="./assets/work-ai-dark.svg" width="840" />
   </picture>
 </p>
 
@@ -35,6 +47,15 @@
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://github.com/pradeepmathias02/localone">Aegis</a>
 </p>
+
+---
+
+### Technical stack & credentials
+
+- **Analytics & BI** — SQL, Excel, Power BI, Tableau, Data Cleaning, EDA, KPI Dashboards, Data Modeling
+- **Python, ML & AI** — Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn, SARIMA, NLP, LangChain, RAG
+- **Data & Engineering** — MySQL, MongoDB, Snowflake, ETL Pipelines, dbt, AWS S3, PySpark, FastAPI, Streamlit
+- **Certifications** — HarvardX Data Science (ML) · Deloitte Australia Analytics · Google AI Essentials · British Airways DS
 
 <details>
 <summary>GitHub activity</summary>
